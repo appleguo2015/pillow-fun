@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>pillow fun</title>
+    <style>
+        #pillow {
+            position: absolute;
+            background-image: url("pillow.gif");
+            background-size: cover;
+            border: none;
+            width: 108px;
+            height: 64.8px;
+        }
+    </style>
+    <script>window.onload = function () {
+        var pillow = document.getElementById("pillow");
+        document.onkeydown = function (event) {
+            event = event || window.event;
+            console.log(event.keyCode);
+            switch (event.keyCode) {
+                case 37:
+                    pillow.style.left = pillow.offsetLeft - 5 + "px";
+                    break;
+                case 38:
+                    pillow.style.top = pillow.offsetTop - 5 + "px";
+                    break;
+                case 39:
+                    pillow.style.left = pillow.offsetLeft + 5 + "px";
+                    break;
+                case 40:
+                    pillow.style.top = pillow.offsetTop + 5 + "px";
+                    break;
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+<div id="pillow"></div>
+</body>
+</html>
